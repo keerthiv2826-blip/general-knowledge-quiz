@@ -33,3 +33,21 @@ general-knowledge-quiz/
 ├── style.css
 ├── script.js
 └── README.md
+
+## 📸 Screenshots
+
+### 🏠 Home Screen
+
+![Home Screen](quiz1.png)
+
+### ✅ Correct Answer
+
+![Correct Answer](quiz2.png)
+
+### ❌ Wrong Answer
+
+![Wrong Answer](quiz3.png)
+
+### 📊 Result Screen
+
+![Result Screen](quiz4.png)
