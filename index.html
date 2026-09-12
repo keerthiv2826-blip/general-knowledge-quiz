@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>General Knowledge Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- =========================
+             START SCREEN
+        ========================== -->
+
+        <div id="startBox">
+
+            <div class="quiz-header">
+
+                <h1>🧠 General Knowledge Quiz</h1>
+
+                <p>
+                    Test your knowledge and challenge yourself!
+                </p>
+
+            </div>
+
+
+            <div class="start-content">
+
+                <h2>🎯 Choose Difficulty</h2>
+
+                <p>
+                    Select a difficulty level to begin.
+                </p>
+
+
+                <div class="difficulty-buttons">
+
+                    <button
+                        class="difficulty-button easy"
+                        onclick="startQuiz('easy')">
+
+                        🟢 Easy
+
+                    </button>
+
+
+                    <button
+                        class="difficulty-button medium"
+                        onclick="startQuiz('medium')">
+
+                        🟡 Medium
+
+                    </button>
+
+
+                    <button
+                        class="difficulty-button hard"
+                        onclick="startQuiz('hard')">
+
+                        🔴 Hard
+
+                    </button>
+
+                </div>
+
+
+                <div class="saved-score">
+
+                    🏆 Your High Score:
+                    <span id="startHighScore">0</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             QUIZ SCREEN
+        ========================== -->
+
+        <div id="quizBox" class="hidden">
+
+            <div class="quiz-header">
+
+                <h1>🧠 General Knowledge Quiz</h1>
+
+            </div>
+
+
+            <!-- QUIZ INFORMATION -->
+
+            <div class="quiz-info">
+
+                <span id="questionNumber">
+                    Question 1 of 3
+                </span>
+
+
+                <span id="score">
+                    Score: 0
+                </span>
+
+
+                <span id="highScore">
+                    🏆 High Score: 0
+                </span>
+
+
+                <span id="timer">
+                    ⏱️ 10s
+                </span>
+
+
+                <span id="lives">
+                    ❤️❤️❤️
+                </span>
+
+            </div>
+
+
+            <!-- DIFFICULTY -->
+
+            <div id="difficultyDisplay">
+                Difficulty: Easy
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+
+            <!-- QUESTION -->
+
+            <h2 id="question">
+                Question goes here
+            </h2>
+
+
+            <!-- OPTIONS -->
+
+            <div id="options"></div>
+
+
+            <!-- HINT -->
+
+            <button id="hintButton">
+                💡 Hint
+            </button>
+
+
+            <p id="hintText"></p>
+
+
+            <!-- FEEDBACK -->
+
+            <p id="feedback"></p>
+
+
+            <!-- NEXT -->
+
+            <button id="nextButton">
+                Next ➜
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             RESULT SCREEN
+        ========================== -->
+
+        <div id="resultBox" class="hidden">
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+
+            <h2>
+                Quiz Completed!
+            </h2>
+
+
+            <p>
+                Here is your performance analysis:
+            </p>
+
+
+            <!-- RESULT SCORE -->
+
+            <div id="finalScore">
+                0 / 3
+            </div>
+
+
+            <!-- RESULT ANALYSIS -->
+
+            <div class="analysis-box">
+
+                <div class="analysis-item">
+
+                    <span>✅ Correct Answers</span>
+
+                    <strong id="correctAnswers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>❌ Wrong Answers</span>
+
+                    <strong id="wrongAnswers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>⏰ Time Outs</span>
+
+                    <strong id="timeOutAnswers">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>📊 Percentage</span>
+
+                    <strong id="percentage">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>❤️ Lives Remaining</span>
+
+                    <strong id="remainingLives">
+                        3
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERFORMANCE -->
+
+            <div class="performance-box">
+
+                <h3>
+                    📊 Performance Analysis
+                </h3>
+
+
+                <p id="resultMessage">
+                    Good job!
+                </p>
+
+            </div>
+
+
+            <!-- HIGH SCORE -->
+
+            <p id="finalHighScore">
+                🏆 High Score: 0
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <button id="restartButton">
+                🔄 Play Again
+            </button>
+
+
+            <button id="changeDifficultyButton">
+                🎯 Change Difficulty
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
